@@ -1,4 +1,10 @@
 CookbookProject::Application.routes.draw do
+  resources :gadgets
+
+  resources :ingredients
+
+  resources :recipes
+
   resources :cookbooks
 
   resources :users
