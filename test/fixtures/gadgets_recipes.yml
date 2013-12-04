@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recipe_ID: 1
+  gadget_ID: 1
+
+two:
+  recipe_ID: 1
+  gadget_ID: 1
