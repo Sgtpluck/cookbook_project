@@ -1,3 +1,3 @@
 class Gadget < ActiveRecord::Base
-  belongs_to :recipes, through: :ingredients_recipes
+  belongs_to :recipes, through: :ingredient_recipes
 end

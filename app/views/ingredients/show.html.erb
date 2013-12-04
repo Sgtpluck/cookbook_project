@@ -10,5 +10,30 @@
   <%= @ingredient.recipe_id %>
 </p>
 
+<p>
+  <strong>Vegetarian:</strong>
+  <%= @ingredient.vegetarian %>
+</p>
+
+<p>
+  <strong>Nuts:</strong>
+  <%= @ingredient.nuts %>
+</p>
+
+<p>
+  <strong>Seafood:</strong>
+  <%= @ingredient.seafood %>
+</p>
+
+<p>
+  <strong>Gluten:</strong>
+  <%= @ingredient.gluten %>
+</p>
+
+<p>
+  <strong>Dairy:</strong>
+  <%= @ingredient.dairy %>
+</p>
+
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
 <%= link_to 'Back', ingredients_path %>
