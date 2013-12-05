@@ -55,8 +55,16 @@ ActiveRecord::Schema.define(version: 20131205011037) do
     t.integer  "ingredient_id"
   end
 
-# Could not dump table "recipes" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "recipes", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.text     "instructions"
+    t.integer  "cookbook_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "vegetarian"
+    t.string   "picture"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
