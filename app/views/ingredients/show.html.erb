@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Recipe:</strong>
-  <%= @ingredient.recipe_id %>
-</p>
-
-<p>
   <strong>Vegetarian:</strong>
   <%= @ingredient.vegetarian %>
 </p>
@@ -36,4 +31,5 @@
 </p>
 
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
-<%= link_to 'Back', ingredients_path %>
+<%= link_to 'Back', ingredients_path %> <br><br>
+<%= link_to 'Go back to the users page!', users_path %>

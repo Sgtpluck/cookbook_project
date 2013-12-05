@@ -15,5 +15,14 @@
   <%= @cookbook.user_id %>
 </p>
 
+<p>
+  <strong>Recipes:</strong><br>
+  <% @cookbook.recipes.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe.id) %><br>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |
 <%= link_to 'Back', cookbooks_path %>
+<br><br>
+<%= link_to 'Go back to the users page!', users_path %>

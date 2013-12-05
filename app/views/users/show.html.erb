@@ -10,5 +10,12 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>User's cookbooks!</strong><br>
+  <% @user.cookbooks.each do |cookbook| %><br>
+    <%= link_to cookbook.name, cookbook_path(cookbook.id) %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

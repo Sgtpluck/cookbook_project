@@ -23,7 +23,7 @@
 <p>
   <strong>Ingredients:</strong><br>
   <% @recipe.ingredients.each do |ingredient|  %>
-  <%= ingredient.name %><br>
+  <%= link_to ingredient.name, ingredient_path(ingredient.id) %><br>
   <% end %>
 </p>
 
