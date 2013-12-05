@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20131205011037) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "vegetarian"
-    t.string   "picture"
+    t.string   "display"
   end
 
   create_table "users", force: true do |t|

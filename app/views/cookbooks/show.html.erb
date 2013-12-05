@@ -18,6 +18,7 @@
 <p>
   <strong>Recipes:</strong><br>
   <% @cookbook.recipes.each do |recipe| %>
+  <%= recipe.display %>
   <%= link_to recipe.name, recipe_path(recipe.id) %><br>
   <% end %>
 </p>

@@ -1,5 +1,5 @@
 class AddingImageToRecipes < ActiveRecord::Migration
   def change
-    add_column :recipes, :picture, :string
+    add_column :recipes, :display, :string
   end
 end

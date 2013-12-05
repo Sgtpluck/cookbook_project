@@ -40,6 +40,12 @@
   <div class="actions">
     <br><br>
 
+     <p>
+      <%= f.label :display, "Upload local file:" %><br />
+      <%= f.file_field :display %>
+      <%= f.hidden_field :display_cache %>
+    </p>
+
       <%= f.submit %>
   </div>
 <% end %>

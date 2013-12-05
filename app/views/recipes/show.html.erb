@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+  <%= image_tag(@recipe.display_url, :width => 400) if @recipe.display.present? %>
+
 <p>
   <strong>Name:</strong>
   <%= @recipe.name %>
@@ -33,6 +35,7 @@
   <%= link_to gadget.name, gadget_path(gadget.id) %><br>
   <% end %>
 </p>
+<br>
 
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

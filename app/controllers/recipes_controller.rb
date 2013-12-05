@@ -70,6 +70,7 @@ class RecipesController < ApplicationController
           next if gadget_id.to_i == 0
           gadget = Gadget.find(gadget_id.to_i)
           @recipe.gadgets << gadget
+
         end
         
         format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
@@ -99,6 +100,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :description, :instructions, :cookbook_id, :vegetarian, :ingredients => {}, :gadgets => {})
+      params.require(:recipe).permit(:name, :description, :instructions, :cookbook_id, :vegetarian, :display, :display_cache, :ingredients => {}, :gadgets => {})
     end
 end
