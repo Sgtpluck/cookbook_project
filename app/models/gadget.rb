@@ -1,3 +1,4 @@
 class Gadget < ActiveRecord::Base
-  belongs_to :recipes, through: :ingredient_recipes
+  has_many :gadgets_recipes
+  has_many :recipes, through: :gadgets_recipes
 end

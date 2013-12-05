@@ -27,5 +27,13 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Gadgets:</strong><br>
+  <% @recipe.gadgets.each do |gadget|  %>
+  <%= link_to gadget.name, gadget_path(gadget.id) %><br>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131204231114) do
+ActiveRecord::Schema.define(version: 20131205011037) do
 
   create_table "cookbooks", force: true do |t|
     t.string   "name"
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20131204231114) do
   end
 
   create_table "gadgets_recipes", force: true do |t|
-    t.integer  "recipe_ID"
-    t.integer  "gadget_ID"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "recipe_id"
+    t.integer  "gadget_id"
   end
 
   create_table "ingredients", force: true do |t|
@@ -55,15 +55,8 @@ ActiveRecord::Schema.define(version: 20131204231114) do
     t.integer  "ingredient_id"
   end
 
-  create_table "recipes", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.text     "instructions"
-    t.integer  "cookbook_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "vegetarian"
-  end
+# Could not dump table "recipes" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "name"

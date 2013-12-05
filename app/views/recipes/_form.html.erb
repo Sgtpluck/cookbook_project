@@ -31,9 +31,15 @@
     <%= f.label :vegetarian %><br>
     <%= f.check_box :vegetarian %>
   </div>
-
+  Pick as many ingredients as necessary.<br>
   <%= f.select(:ingredients, @ingredients, {}, {:multiple => true}) %>
+  <div class="actions"><br>
+    Pick as many gadgets as necessary<br>
+
+  <%= f.select(:gadgets, @gadgets, {}, {:multiple => true}) %>
   <div class="actions">
-    <%= f.submit %>
+    <br><br>
+
+      <%= f.submit %>
   </div>
 <% end %>
