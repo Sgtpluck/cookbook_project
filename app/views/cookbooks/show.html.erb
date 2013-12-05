@@ -18,7 +18,7 @@
 <p>
   <strong>Recipes:</strong><br>
   <% @cookbook.recipes.each do |recipe| %>
-  <%= image_tag(recipe.display_url, :width => 150) if recipe.display.present? %><br>
+
   <%= link_to recipe.name, recipe_path(recipe.id) %><br>
   <% end %>
 </p>

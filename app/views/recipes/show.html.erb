@@ -17,10 +17,6 @@
   <%= @recipe.instructions %>
 </p>
 
-<p>
-  <strong>Cookbook:</strong>
-  <%= @recipe.cookbook_id %>
-</p>
 
 <p>
   <strong>Ingredients:</strong><br>
@@ -39,4 +35,4 @@
 
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back to the cookbook!', cookbook_path(@recipe.cookbook_id) %>
+<%= link_to 'Back to the cookbooks!', cookbooks_path %>

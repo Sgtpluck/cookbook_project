@@ -15,15 +15,10 @@ class RecipesController < ApplicationController
   # GET /recipes/new
   def new
     @recipe = Recipe.new
-    
-    @ingredients = Ingredient.all.collect {|p| [p.name, p.id]}
-    @gadgets = Gadget.all.collect {|g| [g.name, g.id] }
   end
 
   # GET /recipes/1/edit
   def edit
-    @ingredients = Ingredient.all.collect { |p| [p.name, p.id] }
-    @gadgets = Gadget.all.collect {|g| [g.name, g.id] }
   end
 
   # POST /recipes

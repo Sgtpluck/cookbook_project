@@ -23,20 +23,19 @@
     <%= f.label :instructions %><br>
     <%= f.text_area :instructions %>
   </div>
-  <div class="field">
-    <%= f.label :cookbook_id %><br>
-    <%= f.number_field :cookbook_id %>
-  </div>
     <div class="field">
     <%= f.label :vegetarian %><br>
     <%= f.check_box :vegetarian %>
   </div>
+  <div class="action">
   Pick as many ingredients as necessary.<br>
-  <%= f.select(:ingredients, @ingredients, {}, {:multiple => true}) %>
+  <%= f.select(:ingredients, Ingredient.all.collect { |p| [p.name, p.id] }, { selected: @recipe.ingredients.collect{ |i| i.id }}, {:multiple => true}) %>
+</div>
   <div class="actions"><br>
     Pick as many gadgets as necessary<br>
 
-  <%= f.select(:gadgets, @gadgets, {}, {:multiple => true}) %>
+  <%= f.select(:gadgets, Gadget.all.collect {|g| [g.name, g.id] }, { selected: @recipe.gadgets.collect {|i| i.id }}, {:multiple => true}) %>
+</div>
   <div class="actions">
     <br><br>
 
@@ -45,6 +44,8 @@
       <%= f.file_field :display %>
       <%= f.hidden_field :display_cache %>
     </p>
+  </div>
+  <div class="actions">
 
       <%= f.submit %>
   </div>

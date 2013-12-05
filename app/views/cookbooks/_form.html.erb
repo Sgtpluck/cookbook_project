@@ -19,10 +19,13 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+
+  <div class="actions"><br>
+      Pick whatever recipes you want for this cookbook!<br>
+
+  <%= f.select(:recipes, Recipe.all.collect {|g| [g.name, g.id] }, { selected: @cookbook.recipes.collect {|i| i.id }}, {:multiple => true}) %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
