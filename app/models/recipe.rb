@@ -7,9 +7,9 @@ class Recipe < ActiveRecord::Base
   has_many :gadgets, through: :gadgets_recipes
   mount_uploader :display, DisplayUploader
 
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ? OR instructions LIKE ? or description LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
+  def self.search(search_term)
+    if search_term
+      includes(:ingredients).where("(recipes.name) LIKE :s OR (ingredients.name) LIKE :s", s: "%#{search_term.downcase}%")
     else
       find(:all)
     end
