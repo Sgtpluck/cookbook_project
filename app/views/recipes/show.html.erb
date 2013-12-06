@@ -2,36 +2,37 @@
 
   <%= image_tag(@recipe.display_url, :width => 400) if @recipe.display.present? %>
 
-<p>
+<div class="return_list">
   <strong>Name:</strong>
   <%= @recipe.name %>
-</p>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @recipe.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @recipe.description %>
+  </p>
 
-<p>
-  <strong>Instructions:</strong>
-  <%= @recipe.instructions %>
-</p>
+  <p>
+    <strong>Instructions:</strong>
+    <%= @recipe.instructions %>
+  </p>
 
 
-<p>
-  <strong>Ingredients:</strong><br>
-  <% @recipe.ingredients.each do |ingredient|  %>
-  <%= link_to ingredient.name, ingredient_path(ingredient.id) %><br>
-  <% end %>
-</p>
+  <p>
+    <strong>Ingredients:</strong><br>
+    <% @recipe.ingredients.each do |ingredient|  %>
+    <%= link_to ingredient.name, ingredient_path(ingredient.id) %><br>
+    <% end %>
+  </p>
 
-<p>
-  <strong>Gadgets:</strong><br>
-  <% @recipe.gadgets.each do |gadget|  %>
-  <%= link_to gadget.name, gadget_path(gadget.id) %><br>
-  <% end %>
-</p>
-<br>
+  <p>
+    <strong>Gadgets:</strong><br>
+    <% @recipe.gadgets.each do |gadget|  %>
+    <%= link_to gadget.name, gadget_path(gadget.id) %><br>
+    <% end %>
+  </p>
+  <br>
+</div>
 
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
