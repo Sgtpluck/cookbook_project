@@ -11,7 +11,7 @@ class Recipe < ActiveRecord::Base
     if search_term
       includes(:ingredients).where("(recipes.name) LIKE :s OR (ingredients.name) LIKE :s", s: "%#{search_term.downcase}%")
     else
-      find(:all)
+      all
     end
   end
 end
