@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<td>
   <strong>Name:</strong>
   <%= @user.name %>
-</p>
+</td>
 
-<p>
+<td>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
+</td>
 <p>
   <strong>User's cookbooks!</strong><br>
   <% @user.cookbooks.each do |cookbook| %><br>

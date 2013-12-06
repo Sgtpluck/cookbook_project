@@ -4,6 +4,30 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  margin-top: 80px;
+}
+
+table, th, td
+{
+border: nil;
+text-align: center;
+padding: 10px;
+}
+
+h1{
+  margin-top: 70px;
+}
+
+table {
+  margin-top: 15px;
+}
+
+notice {
+  margin-top: 75px;
+}
+
+return_list {
+  margin-top: 75px;
 }
 
 p, ol, ul, td {
