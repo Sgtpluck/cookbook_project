@@ -7,7 +7,7 @@
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 .search-bar{
   margin-top: 10px;
-  float: right;
+  text-align: right;
   color: grey;
 
 
@@ -50,7 +50,7 @@ html {
 }
 
 body {
-  margin: 75px;
+  
 }
 
 a {
