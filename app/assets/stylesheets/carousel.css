@@ -8,7 +8,6 @@ body {
 }
 
 
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -36,9 +35,10 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
+.myCarousel {
   height: 500px;
   margin-bottom: 60px;
+  opacity:0.5;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -48,9 +48,12 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  opacity: 1.0;
+  background-color: grey;
+  background-image:url('http://www.restaurantgirl.com/Slider.jpg');
+  background-size: 90%;
 }
-.carousel-inner > .item > img {
+.carousel-inner > .item > {
   position: absolute;
   top: 0;
   left: 0;
@@ -86,18 +89,18 @@ body {
 /* Featurettes
 ------------------------- */
 
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
+/*.featurette-divider {
+  margin: 80px 0;}*/ /* Space out the Bootstrap <hr> more */
+
 
 /* Thin out the marketing headings */
-.featurette-heading {
+
+/*.featurette-heading {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
 }
-
-
+*/
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -111,7 +114,7 @@ body {
   }
 
   /* Navbar positioning foo */
-  .navbar-wrapper {
+/*  .navbar-wrapper {
     margin-top: 20px;
   }
   .navbar-wrapper .container {
@@ -121,12 +124,12 @@ body {
   .navbar-wrapper .navbar {
     padding-left:  0;
     padding-right: 0;
-  }
+  }*/
 
   /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
+  /*.navbar-wrapper .navbar {
     border-radius: 4px;
-  }
+  }*/
 
   /* Bump up size of carousel content */
   .carousel-caption p {
@@ -135,18 +138,18 @@ body {
     line-height: 1.4;
   }
 
-  .featurette-heading {
+  /*.featurette-heading {
     font-size: 50px;
   }
-  
+  */
   .img-circle {
   border-radius: 50%;
   }
 
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
-}
+}*/
