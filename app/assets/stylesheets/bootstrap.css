@@ -6,7 +6,10 @@
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 .search-bar{
-  margin-top: 75px;
+  margin-top: 10px;
+  float: right;
+  color: grey;
+
 
 }
 article,
@@ -47,7 +50,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 75px;
 }
 
 a {
