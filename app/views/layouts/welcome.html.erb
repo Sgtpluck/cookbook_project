@@ -78,20 +78,24 @@
         <div class="col-md-4">
          
           <h2>Recipes</h2>
-          <p>Tons of Mouthwatering Ingredients of World Famous Burgers and Meatballs</p>
-          <p><a class="btn btn-default" href="/recipes" role="button">View details &raquo;</a></p>
+          <p>Tons of Mouthwatering, World-Famous Burgers and Meatballs!</p>
+          <p><a class="btn btn-default" href="/recipes" role="button">Check 'em out!</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
           
           <h2>Become a User today!</h2>
-          <p> You know you want to make a cookbook!</p>
-          <p><a class="btn btn-default" href="/users/new" role="button">View details &raquo;</a></p>
+          <p> You know you wanna<br> make a cookbook!</p>
+          <p><a class="btn btn-default" href="/users/new" role="button">Nom nom nom</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-md-4">
          
-          <h2>Search by Ingredient</h2>
-          <p>Checkout Recipes by Ingredient</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Search Recipes by Ingredient</h2>
+          <div class= "search-bar">
+              <%= form_tag(recipes_path, method: :get) do %>
+              
+              <%= text_field_tag :search_recipe, params[:search_recipe] %>
+              <%= submit_tag "Search", :name => nil %>
+            <% end %>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div>
