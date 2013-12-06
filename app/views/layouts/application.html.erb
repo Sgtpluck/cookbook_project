@@ -44,17 +44,20 @@
       </div><!-- /.container -->
     </nav>
     
+    
     <!-- Page content goes here -->
+    <div class= "search-bar">
     <%= form_tag(ingredients_path, method: "get") do %>
     <%= label_tag("Search for ingredients:") %>
     <%= text_field_tag :search_ingredients, params[:search_ingredients]%>
     <%= submit_tag "Search", :name=> nil %>
-    <% end %>
-
+    <% end %></div>
+    <div class= "search-bar">
     <%= form_tag(recipes_path, method: "get") do %>
     <%= label_tag("Search for recipes:") %>
     <%= text_field_tag :search_recipe, params[:search_recipe] %>
     <%= submit_tag "Search", :name => nil %>
+    </div>
     <% end %>
     <%= yield %>
   <br><br>
