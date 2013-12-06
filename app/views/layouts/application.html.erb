@@ -1,27 +1,68 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-  <title>CookbookProject</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= form_tag(ingredients_path, method: "get") do %>
-  <%= label_tag("Search for ingredients:") %>
-  <%= text_field_tag :search_ingredients, params[:search_ingredients]%>
-  <%= submit_tag "Search", :name=> nil %>
-<% end %>
+<html class="full" lang="en"><!-- The full page image background will only work if the html has the custom class set to it! Don't delete it! -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <%= form_tag(recipes_path, method: "get") do %>
-  <%= label_tag("Search for recipes:") %>
-  <%= text_field_tag :search_recipe, params[:search_recipe] %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
+    <title>CookbookProject</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
-<%= yield %>
-<br><br>
-<%= link_to 'Go back to the users page!', users_path %>
-</body>
+    <!-- Custom CSS for the 'Full' Template -->
+    <link href="bootstrap-theme.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/recipes">Recipes</a></li>
+            <li><a href="/ingredients">Ingredients</a></li>
+            <li><a href="/gadgets">Gadgets</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+    
+    <!-- Page content goes here -->
+    <%= form_tag(ingredients_path, method: "get") do %>
+    <%= label_tag("Search for ingredients:") %>
+    <%= text_field_tag :search_ingredients, params[:search_ingredients]%>
+    <%= submit_tag "Search", :name=> nil %>
+    <% end %>
+
+    <%= form_tag(recipes_path, method: "get") do %>
+    <%= label_tag("Search for recipes:") %>
+    <%= text_field_tag :search_recipe, params[:search_recipe] %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+    <%= yield %>
+  <br><br>
+  <%= link_to 'Go back to the users page!', users_path %>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="javascript/bootstrap.js"></script>
+
+  </body>
+
 </html>

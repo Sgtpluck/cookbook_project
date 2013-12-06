@@ -1,4 +1,6 @@
 CookbookProject::Application.routes.draw do
+  root "welcome#index"
+  
   resources :gadgets
 
   resources :ingredients
