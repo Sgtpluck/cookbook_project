@@ -4,7 +4,7 @@ class IngredientsController < ApplicationController
   # GET /ingredients
   # GET /ingredients.json
   def index
-    @ingredients = Ingredient.search(params[:search])
+    @ingredients = Ingredient.search(params[:search_ingredients])
   end
 
   # GET /ingredients/1
