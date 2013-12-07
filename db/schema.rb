@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 20131205220126) do
   end
 
   create_table "ingredients_recipes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "recipe_id"
     t.integer  "ingredient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "recipes", force: true do |t|
